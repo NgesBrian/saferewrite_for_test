@@ -1,0 +1,2 @@
+in uint8 x 1
+call load64
