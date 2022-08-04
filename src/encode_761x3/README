@@ -1,0 +1,20 @@
+2021.09.01 tests with pip version of angr: A bug in angr's handling of
+vpackuswb leads saferewrite to produce "z3failed" for this example,
+aborting the equality comparison.
+
+2021.09.04 tests with angr-dev: Everything now works fine thanks to
+https://github.com/angr/angr/pull/2887. avx=ref and portable=ref with
+both compilers now, ref=ref across compilers.
+
+2021.09.14 benchmarks:
+
+build/encode_761x3/avx/clang_-O1_-fwrapv_-march_native seconds unroll 7.846422
+build/encode_761x3/avx/gcc_-O3_-march_native_-mtune_native seconds unroll 8.403044
+build/encode_761x3/ref/gcc_-O3_-march_native_-mtune_native seconds unroll 9.720540
+build/encode_761x3/ref/clang_-O1_-fwrapv_-march_native seconds unroll 10.520788
+build/encode_761x3/ref/gcc_-O3_-march_native_-mtune_native equals-ref-clang_-O1_-fwrapv_-march_native
+build/encode_761x3/ref/gcc_-O3_-march_native_-mtune_native seconds equiv 1.784317
+build/encode_761x3/avx/clang_-O1_-fwrapv_-march_native equals-ref-clang_-O1_-fwrapv_-march_native
+build/encode_761x3/avx/clang_-O1_-fwrapv_-march_native seconds equiv 2.813433
+build/encode_761x3/avx/gcc_-O3_-march_native_-mtune_native equals-ref-gcc_-O3_-march_native_-mtune_native
+build/encode_761x3/avx/gcc_-O3_-march_native_-mtune_native seconds equiv 4.653523

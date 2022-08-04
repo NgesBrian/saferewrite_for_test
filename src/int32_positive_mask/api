@@ -1,0 +1,3 @@
+return int32 mask
+in int32 x
+call int32_positive_mask

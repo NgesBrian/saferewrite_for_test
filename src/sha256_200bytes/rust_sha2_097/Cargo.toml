@@ -1,0 +1,7 @@
+[package]
+name = "sha256_200bytes"
+version = "0.1.0"
+edition = "2018"
+
+[dependencies]
+sha2 = "^0.9"

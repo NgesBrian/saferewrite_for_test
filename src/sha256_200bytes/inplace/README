@@ -1,0 +1,3 @@
+hash.c is supercop/crypto_hash/sha256/ref/hash.c.
+
+blocks.c is supercop/crypto_hashblocks/sha256/inplace/blocks.c.

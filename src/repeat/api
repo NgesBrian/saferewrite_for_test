@@ -1,0 +1,4 @@
+in uint32 x 64
+in uint32 y 64
+call verify
+return uint32 z

@@ -1,0 +1,3 @@
+call flip
+in int8 x 2
+out int8 y 2

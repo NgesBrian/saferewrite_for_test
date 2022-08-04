@@ -1,0 +1,12 @@
+2021.09.14 benchmarks:
+
+build/decode_256x2/avx/gcc_-O3_-march_native_-mtune_native seconds unroll 7.114941
+build/decode_256x2/avx/clang_-O1_-fwrapv_-march_native seconds unroll 6.852110
+build/decode_256x2/ref/clang_-O1_-fwrapv_-march_native seconds unroll 9.667127
+build/decode_256x2/ref/gcc_-O3_-march_native_-mtune_native seconds unroll 9.859837
+build/decode_256x2/ref/gcc_-O3_-march_native_-mtune_native equals-ref-clang_-O1_-fwrapv_-march_native
+build/decode_256x2/ref/gcc_-O3_-march_native_-mtune_native seconds equiv 0.632704
+build/decode_256x2/avx/clang_-O1_-fwrapv_-march_native equals-ref-clang_-O1_-fwrapv_-march_native
+build/decode_256x2/avx/clang_-O1_-fwrapv_-march_native seconds equiv 0.868439
+build/decode_256x2/avx/gcc_-O3_-march_native_-mtune_native equals-ref-gcc_-O3_-march_native_-mtune_native
+build/decode_256x2/avx/gcc_-O3_-march_native_-mtune_native seconds equiv 0.744175

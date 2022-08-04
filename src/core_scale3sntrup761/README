@@ -1,0 +1,25 @@
+2021.09.14 benchmarks, EPYC 7742, a few hours:
+
+build/core_scale3sntrup761/avx/gcc_-O3_-march_native_-mtune_native seconds unroll 9.739789
+build/core_scale3sntrup761/avx/clang_-O1_-fwrapv_-march_native seconds unroll 9.521103
+build/core_scale3sntrup761/ref/gcc_-O3_-march_native_-mtune_native seconds unroll 12.439163
+build/core_scale3sntrup761/ref/clang_-O1_-fwrapv_-march_native seconds unroll 22.875408
+build/core_scale3sntrup761/avx/gcc_-O3_-march_native_-mtune_native equals-ref-gcc_-O3_-march_native_-mtune_native
+build/core_scale3sntrup761/avx/gcc_-O3_-march_native_-mtune_native seconds equiv 2.996171
+build/core_scale3sntrup761/ref/gcc_-O3_-march_native_-mtune_native equals-ref-clang_-O1_-fwrapv_-march_native
+build/core_scale3sntrup761/ref/gcc_-O3_-march_native_-mtune_native seconds equiv 5068.290640
+build/core_scale3sntrup761/avx/clang_-O1_-fwrapv_-march_native equals-ref-clang_-O1_-fwrapv_-march_native
+build/core_scale3sntrup761/avx/clang_-O1_-fwrapv_-march_native seconds equiv 9777.581469
+
+2021.09.15 benchmarks, EPYC 7501:
+
+build/core_scale3sntrup761/avx/clang_-O1_-fwrapv_-march_native seconds unroll 12.697268
+build/core_scale3sntrup761/avx/gcc_-O3_-march_native_-mtune_native seconds unroll 14.250457
+build/core_scale3sntrup761/ref/gcc_-O3_-march_native_-mtune_native seconds unroll 20.494747
+build/core_scale3sntrup761/ref/clang_-O1_-fwrapv_-march_native seconds unroll 47.278635
+build/core_scale3sntrup761/avx/gcc_-O3_-march_native_-mtune_native equals-ref-gcc_-O3_-march_native_-mtune_native
+build/core_scale3sntrup761/avx/gcc_-O3_-march_native_-mtune_native seconds equiv 9.720401
+build/core_scale3sntrup761/ref/gcc_-O3_-march_native_-mtune_native equals-ref-clang_-O1_-fwrapv_-march_native
+build/core_scale3sntrup761/ref/gcc_-O3_-march_native_-mtune_native seconds equiv 8380.426049
+build/core_scale3sntrup761/avx/clang_-O1_-fwrapv_-march_native equals-ref-clang_-O1_-fwrapv_-march_native
+build/core_scale3sntrup761/avx/clang_-O1_-fwrapv_-march_native seconds equiv 13207.503565

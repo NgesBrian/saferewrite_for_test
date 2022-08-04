@@ -1,0 +1,55 @@
+2021.09.03 tests with pip version of angr:
+
+   * portable gives warning-unrollerror with gcc -O3 since
+     Iop_QNarrowBin32Sto16Ux8 isn't supported in angr.
+
+2021.09.04 tests with angr-dev: Unrolling now works fine thanks to
+https://github.com/angr/angr/pull/2887. avx=ref and portable=ref with
+both compilers now, ref=ref across compilers.
+
+2021.09.14 benchmarks, EPYC 7742:
+
+build/encode_761x4591/avx/clang_-O1_-fwrapv_-march_native warning-mul
+build/encode_761x4591/avx/gcc_-O3_-march_native_-mtune_native warning-mul
+build/encode_761x4591/avx/clang_-O1_-fwrapv_-march_native seconds unroll 15.160968
+build/encode_761x4591/avx/gcc_-O3_-march_native_-mtune_native seconds unroll 15.492687
+build/encode_761x4591/portable/clang_-O1_-fwrapv_-march_native warning-mul
+build/encode_761x4591/portable/clang_-O1_-fwrapv_-march_native seconds unroll 17.072737
+build/encode_761x4591/ref/gcc_-O3_-march_native_-mtune_native warning-mul
+build/encode_761x4591/ref/gcc_-O3_-march_native_-mtune_native seconds unroll 24.376248
+build/encode_761x4591/ref/clang_-O1_-fwrapv_-march_native warning-mul
+build/encode_761x4591/ref/clang_-O1_-fwrapv_-march_native seconds unroll 27.501085
+build/encode_761x4591/portable/clang_-O1_-fwrapv_-march_native equals-ref-clang_-O1_-fwrapv_-march_native
+build/encode_761x4591/portable/clang_-O1_-fwrapv_-march_native seconds equiv 1.642062
+build/encode_761x4591/ref/gcc_-O3_-march_native_-mtune_native equals-ref-clang_-O1_-fwrapv_-march_native
+build/encode_761x4591/ref/gcc_-O3_-march_native_-mtune_native seconds equiv 1.683162
+build/encode_761x4591/avx/clang_-O1_-fwrapv_-march_native equals-ref-clang_-O1_-fwrapv_-march_native
+build/encode_761x4591/avx/clang_-O1_-fwrapv_-march_native seconds equiv 1.897204
+
+2021.09.16 benchmarks, EPYC 7742:
+
+build/encode_761x4591/avx/gcc_-O3_-march_native_-mtune_native equals-ref-gcc_-O3_-march_native_-mtune_native
+build/encode_761x4591/avx/gcc_-O3_-march_native_-mtune_native seconds equiv 132618.525005
+
+2021.09.27 benchmarks, EPYC 7501:
+
+build/encode_761x4591/portable/gcc_-O3_-march_native_-mtune_native warning-mul
+build/encode_761x4591/avx/clang_-O1_-fwrapv_-march_native warning-mul
+build/encode_761x4591/portable/clang_-O1_-fwrapv_-march_native warning-mul
+build/encode_761x4591/avx/gcc_-O3_-march_native_-mtune_native warning-mul
+build/encode_761x4591/avx/clang_-O1_-fwrapv_-march_native seconds unroll 26.397915
+build/encode_761x4591/portable/clang_-O1_-fwrapv_-march_native seconds unroll 26.305135
+build/encode_761x4591/portable/gcc_-O3_-march_native_-mtune_native seconds unroll 26.224765
+build/encode_761x4591/avx/gcc_-O3_-march_native_-mtune_native seconds unroll 27.770387
+build/encode_761x4591/ref/gcc_-O3_-march_native_-mtune_native warning-mul
+build/encode_761x4591/ref/gcc_-O3_-march_native_-mtune_native seconds unroll 48.762619
+build/encode_761x4591/ref/clang_-O1_-fwrapv_-march_native warning-mul
+build/encode_761x4591/ref/clang_-O1_-fwrapv_-march_native seconds unroll 59.712889
+build/encode_761x4591/portable/clang_-O1_-fwrapv_-march_native equals-ref-clang_-O1_-fwrapv_-march_native
+build/encode_761x4591/portable/clang_-O1_-fwrapv_-march_native seconds equiv 11.498500
+build/encode_761x4591/ref/gcc_-O3_-march_native_-mtune_native equals-ref-clang_-O1_-fwrapv_-march_native
+build/encode_761x4591/ref/gcc_-O3_-march_native_-mtune_native seconds equiv 8.712421
+build/encode_761x4591/avx/clang_-O1_-fwrapv_-march_native equals-ref-clang_-O1_-fwrapv_-march_native
+build/encode_761x4591/avx/clang_-O1_-fwrapv_-march_native seconds equiv 10.741940
+build/encode_761x4591/avx/gcc_-O3_-march_native_-mtune_native equals-ref-gcc_-O3_-march_native_-mtune_native
+build/encode_761x4591/avx/gcc_-O3_-march_native_-mtune_native seconds equiv 192629.846660

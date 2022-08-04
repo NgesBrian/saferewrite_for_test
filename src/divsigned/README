@@ -1,0 +1,18 @@
+2021.09.15 benchmarks, EPYC 7501:
+
+build/divsigned/ref/clang_-O1_-fwrapv_-march_native warning-div
+build/divsigned/ref/clang_-O1_-fwrapv_-march_native seconds unroll 4.660997
+build/divsigned/ref/gcc_-O3_-march_native_-mtune_native warning-div
+build/divsigned/ref/gcc_-O3_-march_native_-mtune_native seconds unroll 4.777347
+build/divsigned/checkneg/gcc_-O3_-march_native_-mtune_native unsafe-unrollsplit-4
+build/divsigned/checkneg/gcc_-O3_-march_native_-mtune_native warning-div
+build/divsigned/checkneg/gcc_-O3_-march_native_-mtune_native seconds unroll 5.393363
+build/divsigned/checkneg/clang_-O1_-fwrapv_-march_native unsafe-unrollsplit-4
+build/divsigned/checkneg/clang_-O1_-fwrapv_-march_native warning-div
+build/divsigned/checkneg/clang_-O1_-fwrapv_-march_native seconds unroll 5.619963
+build/divsigned/ref/gcc_-O3_-march_native_-mtune_native equals-ref-clang_-O1_-fwrapv_-march_native
+build/divsigned/ref/gcc_-O3_-march_native_-mtune_native seconds equiv 5.677227
+build/divsigned/checkneg/gcc_-O3_-march_native_-mtune_native unsafe-differentfrom-ref-gcc_-O3_-march_native_-mtune_native
+build/divsigned/checkneg/gcc_-O3_-march_native_-mtune_native seconds equiv 966.468638
+build/divsigned/checkneg/clang_-O1_-fwrapv_-march_native unsafe-differentfrom-ref-clang_-O1_-fwrapv_-march_native
+build/divsigned/checkneg/clang_-O1_-fwrapv_-march_native seconds equiv 4023.692282

@@ -1,0 +1,2 @@
+inout uint32 x 2
+call uint32_sort2

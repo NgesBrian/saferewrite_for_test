@@ -1,0 +1,52 @@
+2021.09.15 benchmarks, EPYC 7501:
+
+build/int32_sort2/bitops/gcc_-O3_-march_native_-mtune_native seconds unroll 4.333593
+build/int32_sort2/mul/clang_-O1_-fwrapv_-march_native seconds unroll 4.201027
+build/int32_sort2/bitops/clang_-O1_-fwrapv_-march_native seconds unroll 4.622215
+build/int32_sort2/balanced/clang_-O1_-fwrapv_-march_native unsafe-unrollsplit-2
+build/int32_sort2/balanced/gcc_-O3_-march_native_-mtune_native unsafe-unrollsplit-2
+build/int32_sort2/ref/clang_-O1_-fwrapv_-march_native unsafe-unrollsplit-2
+build/int32_sort2/mul/gcc_-O3_-march_native_-mtune_native warning-mul
+build/int32_sort2/mul/gcc_-O3_-march_native_-mtune_native seconds unroll 4.652353
+build/int32_sort2/ref/clang_-O1_-fwrapv_-march_native seconds unroll 4.618497
+build/int32_sort2/balanced/clang_-O1_-fwrapv_-march_native seconds unroll 4.664928
+build/int32_sort2/balanced/gcc_-O3_-march_native_-mtune_native seconds unroll 4.627941
+build/int32_sort2/ref/gcc_-O3_-march_native_-mtune_native unsafe-unrollsplit-2
+build/int32_sort2/ref/gcc_-O3_-march_native_-mtune_native seconds unroll 4.957246
+build/int32_sort2/rust/gcc_-O3_-march_native_-mtune_native unsafe-unrollsplit-2
+build/int32_sort2/rust/gcc_-O3_-march_native_-mtune_native seconds unroll 1.050484
+build/int32_sort2/rust/clang_-O1_-fwrapv_-march_native unsafe-unrollsplit-2
+build/int32_sort2/rust/clang_-O1_-fwrapv_-march_native seconds unroll 1.462250
+build/int32_sort2/ternary/gcc_-O3_-march_native_-mtune_native unsafe-unrollsplit-2
+build/int32_sort2/ternary/gcc_-O3_-march_native_-mtune_native seconds unroll 3.149286
+build/int32_sort2/xor/clang_-O1_-fwrapv_-march_native seconds unroll 3.525949
+build/int32_sort2/ternary/clang_-O1_-fwrapv_-march_native seconds unroll 3.707924
+build/int32_sort2/varindex/gcc_-O3_-march_native_-mtune_native warning-unrollnotpartition
+build/int32_sort2/varindex/clang_-O1_-fwrapv_-march_native warning-unrollnotpartition
+build/int32_sort2/xor/gcc_-O3_-march_native_-mtune_native seconds unroll 4.472095
+build/int32_sort2/balanced/gcc_-O3_-march_native_-mtune_native equals-ref-gcc_-O3_-march_native_-mtune_native
+build/int32_sort2/balanced/gcc_-O3_-march_native_-mtune_native seconds equiv 0.049604
+build/int32_sort2/xor/gcc_-O3_-march_native_-mtune_native equals-ref-gcc_-O3_-march_native_-mtune_native
+build/int32_sort2/xor/gcc_-O3_-march_native_-mtune_native seconds equiv 0.108613
+build/int32_sort2/ternary/gcc_-O3_-march_native_-mtune_native equals-ref-gcc_-O3_-march_native_-mtune_native
+build/int32_sort2/ternary/gcc_-O3_-march_native_-mtune_native seconds equiv 0.071012
+build/int32_sort2/mul/clang_-O1_-fwrapv_-march_native equals-ref-clang_-O1_-fwrapv_-march_native
+build/int32_sort2/mul/clang_-O1_-fwrapv_-march_native seconds equiv 0.258379
+build/int32_sort2/ternary/clang_-O1_-fwrapv_-march_native equals-ref-clang_-O1_-fwrapv_-march_native
+build/int32_sort2/ternary/clang_-O1_-fwrapv_-march_native seconds equiv 0.118904
+build/int32_sort2/balanced/clang_-O1_-fwrapv_-march_native equals-ref-clang_-O1_-fwrapv_-march_native
+build/int32_sort2/balanced/clang_-O1_-fwrapv_-march_native seconds equiv 0.095378
+build/int32_sort2/ref/gcc_-O3_-march_native_-mtune_native equals-ref-clang_-O1_-fwrapv_-march_native
+build/int32_sort2/ref/gcc_-O3_-march_native_-mtune_native seconds equiv 0.070634
+build/int32_sort2/rust/gcc_-O3_-march_native_-mtune_native equals-ref-gcc_-O3_-march_native_-mtune_native
+build/int32_sort2/rust/clang_-O1_-fwrapv_-march_native equals-ref-clang_-O1_-fwrapv_-march_native
+build/int32_sort2/rust/gcc_-O3_-march_native_-mtune_native seconds equiv 0.075122
+build/int32_sort2/rust/clang_-O1_-fwrapv_-march_native seconds equiv 0.088430
+build/int32_sort2/bitops/clang_-O1_-fwrapv_-march_native equals-ref-clang_-O1_-fwrapv_-march_native
+build/int32_sort2/bitops/clang_-O1_-fwrapv_-march_native seconds equiv 0.176875
+build/int32_sort2/mul/gcc_-O3_-march_native_-mtune_native equals-ref-gcc_-O3_-march_native_-mtune_native
+build/int32_sort2/mul/gcc_-O3_-march_native_-mtune_native seconds equiv 0.215494
+build/int32_sort2/xor/clang_-O1_-fwrapv_-march_native equals-ref-clang_-O1_-fwrapv_-march_native
+build/int32_sort2/xor/clang_-O1_-fwrapv_-march_native seconds equiv 0.084069
+build/int32_sort2/bitops/gcc_-O3_-march_native_-mtune_native equals-ref-gcc_-O3_-march_native_-mtune_native
+build/int32_sort2/bitops/gcc_-O3_-march_native_-mtune_native seconds equiv 0.138202

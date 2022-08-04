@@ -1,0 +1,5 @@
+call divmod14
+out int32 q 1
+out int16 r 1
+in int32 a
+in int16 b

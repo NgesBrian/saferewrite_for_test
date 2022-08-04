@@ -1,0 +1,5 @@
+call crypto_core
+out int8 out 1522
+in int8 in 1522
+in int8 k 0
+in int8 c 0

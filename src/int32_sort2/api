@@ -1,0 +1,2 @@
+inout int32 x 2
+call int32_sort2

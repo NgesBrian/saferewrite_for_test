@@ -1,0 +1,5 @@
+uint16.c, uint32.c, uint32.h, uint64.h copied from
+supercop/crypto_decode/761x1531/ref.
+
+uint32.c asks caller to guarantee 0<m<16384;
+wrapper.c actually allows m=16384, which works too.

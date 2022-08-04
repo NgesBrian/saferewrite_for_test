@@ -1,0 +1,5 @@
+call divmod
+out int64 q 1
+out int64 r 1
+in int64 a
+in int64 b

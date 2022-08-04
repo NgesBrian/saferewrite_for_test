@@ -1,0 +1,83 @@
+2021.09.17 benchmarks, EPYC 7742:
+
+build/encode_761x1531/avx/clang_-O1_-fwrapv_-march_native warning-mul
+build/encode_761x1531/avx/gcc_-O3_-march_native_-mtune_native warning-mul
+build/encode_761x1531/avx/clang_-O1_-fwrapv_-march_native seconds unroll 14.278443
+build/encode_761x1531/avx/gcc_-O3_-march_native_-mtune_native seconds unroll 14.607267
+build/encode_761x1531/portable/gcc_-O3_-march_native_-mtune_native warning-mul
+build/encode_761x1531/portable/clang_-O1_-fwrapv_-march_native warning-mul
+build/encode_761x1531/portable/gcc_-O3_-march_native_-mtune_native seconds unroll 17.265361
+build/encode_761x1531/portable/clang_-O1_-fwrapv_-march_native seconds unroll 17.783086
+build/encode_761x1531/ref/gcc_-O3_-march_native_-mtune_native warning-mul
+build/encode_761x1531/ref/gcc_-O3_-march_native_-mtune_native seconds unroll 24.918347
+build/encode_761x1531/ref/clang_-O1_-fwrapv_-march_native warning-mul
+build/encode_761x1531/ref/clang_-O1_-fwrapv_-march_native seconds unroll 28.413679
+build/encode_761x1531/ref/gcc_-O3_-march_native_-mtune_native equals-ref-clang_-O1_-fwrapv_-march_native
+build/encode_761x1531/ref/gcc_-O3_-march_native_-mtune_native seconds equiv 6.930581
+build/encode_761x1531/avx/clang_-O1_-fwrapv_-march_native equals-ref-clang_-O1_-fwrapv_-march_native
+build/encode_761x1531/avx/clang_-O1_-fwrapv_-march_native seconds equiv 7.597123
+build/encode_761x1531/avx/gcc_-O3_-march_native_-mtune_native equals-ref-gcc_-O3_-march_native_-mtune_native
+build/encode_761x1531/avx/gcc_-O3_-march_native_-mtune_native seconds equiv 238444.022899
+
+2021.09.27 benchmarks, EPYC 7501:
+
+build/encode_761x1531/portable/gcc_-O3_-march_native_-mtune_native warning-mul
+build/encode_761x1531/avx/clang_-O1_-fwrapv_-march_native warning-mul
+build/encode_761x1531round/avx/clang_-O1_-fwrapv_-march_native warning-mul
+build/encode_761x1531/portable/gcc_-O3_-march_native_-mtune_native seconds unroll 25.192741
+build/encode_761x1531/portable/clang_-O1_-fwrapv_-march_native warning-mul
+build/encode_761x1531/avx/clang_-O1_-fwrapv_-march_native seconds unroll 26.694772
+build/encode_761x1531round/avx/gcc_-O3_-march_native_-mtune_native warning-mul
+build/encode_761x1531/avx/gcc_-O3_-march_native_-mtune_native warning-mul
+build/encode_761x1531/portable/clang_-O1_-fwrapv_-march_native seconds unroll 26.746295
+build/encode_761x1531round/avx/clang_-O1_-fwrapv_-march_native seconds unroll 29.199127
+build/encode_761x1531/avx/gcc_-O3_-march_native_-mtune_native seconds unroll 29.167142
+build/encode_761x1531round/avx/gcc_-O3_-march_native_-mtune_native seconds unroll 31.371741
+build/encode_761x1531/ref/gcc_-O3_-march_native_-mtune_native warning-mul
+build/encode_761x1531round/ref/gcc_-O3_-march_native_-mtune_native warning-mul
+build/encode_761x1531/ref/gcc_-O3_-march_native_-mtune_native seconds unroll 48.969787
+build/encode_761x1531round/ref/gcc_-O3_-march_native_-mtune_native seconds unroll 54.095456
+build/encode_761x1531/ref/clang_-O1_-fwrapv_-march_native warning-mul
+build/encode_761x1531/ref/clang_-O1_-fwrapv_-march_native seconds unroll 58.709862
+build/encode_761x1531round/ref/clang_-O1_-fwrapv_-march_native warning-mul
+build/encode_761x1531round/ref/clang_-O1_-fwrapv_-march_native seconds unroll 67.133466
+build/encode_761x1531/ref/gcc_-O3_-march_native_-mtune_native equals-ref-clang_-O1_-fwrapv_-march_native
+build/encode_761x1531/ref/gcc_-O3_-march_native_-mtune_native seconds equiv 20.877459
+build/encode_761x1531/avx/clang_-O1_-fwrapv_-march_native equals-ref-clang_-O1_-fwrapv_-march_native
+build/encode_761x1531/avx/clang_-O1_-fwrapv_-march_native seconds equiv 18.063431
+build/encode_761x1531/portable/gcc_-O3_-march_native_-mtune_native equals-ref-gcc_-O3_-march_native_-mtune_native
+build/encode_761x1531/portable/gcc_-O3_-march_native_-mtune_native seconds equiv 938482.931284
+build/encode_761x1531/avx/gcc_-O3_-march_native_-mtune_native equals-ref-gcc_-O3_-march_native_-mtune_native
+build/encode_761x1531/avx/gcc_-O3_-march_native_-mtune_native seconds equiv 943869.955086
+
+2021.09.27 benchmarks, EPYC 7742:
+
+build/encode_761x1531round/ref/gcc_-O3_-march_native_-mtune_native warning-unrollerror
+build/encode_761x1531/avx/clang_-O1_-fwrapv_-march_native warning-mul
+build/encode_761x1531/avx/gcc_-O3_-march_native_-mtune_native warning-mul
+build/encode_761x1531/avx/clang_-O1_-fwrapv_-march_native seconds unroll 14.516642
+build/encode_761x1531/avx/gcc_-O3_-march_native_-mtune_native seconds unroll 15.046116
+build/encode_761x1531round/avx/gcc_-O3_-march_native_-mtune_native warning-mul
+build/encode_761x1531round/avx/clang_-O1_-fwrapv_-march_native warning-mul
+build/encode_761x1531round/avx/gcc_-O3_-march_native_-mtune_native seconds unroll 15.798630
+build/encode_761x1531round/avx/clang_-O1_-fwrapv_-march_native seconds unroll 16.259714
+build/encode_761x1531/portable/clang_-O1_-fwrapv_-march_native warning-mul
+build/encode_761x1531/portable/gcc_-O3_-march_native_-mtune_native warning-mul
+build/encode_761x1531/portable/clang_-O1_-fwrapv_-march_native seconds unroll 20.290180
+build/encode_761x1531/portable/gcc_-O3_-march_native_-mtune_native seconds unroll 18.162228
+build/encode_761x1531/ref/gcc_-O3_-march_native_-mtune_native warning-mul
+build/encode_761x1531/ref/gcc_-O3_-march_native_-mtune_native seconds unroll 25.129884
+build/encode_761x1531/ref/clang_-O1_-fwrapv_-march_native warning-mul
+build/encode_761x1531/ref/clang_-O1_-fwrapv_-march_native seconds unroll 32.422262
+build/encode_761x1531round/ref/clang_-O1_-fwrapv_-march_native warning-mul
+build/encode_761x1531round/ref/clang_-O1_-fwrapv_-march_native seconds unroll 31.875138
+build/encode_761x1531/ref/gcc_-O3_-march_native_-mtune_native equals-ref-clang_-O1_-fwrapv_-march_native
+build/encode_761x1531/ref/gcc_-O3_-march_native_-mtune_native seconds equiv 7.407826
+build/encode_761x1531/avx/clang_-O1_-fwrapv_-march_native equals-ref-clang_-O1_-fwrapv_-march_native
+build/encode_761x1531/avx/clang_-O1_-fwrapv_-march_native seconds equiv 8.254202
+build/encode_761x1531/avx/gcc_-O3_-march_native_-mtune_native equals-ref-gcc_-O3_-march_native_-mtune_native
+build/encode_761x1531/avx/gcc_-O3_-march_native_-mtune_native seconds equiv 247046.073945
+build/encode_761x1531/portable/clang_-O1_-fwrapv_-march_native equals-ref-clang_-O1_-fwrapv_-march_native
+build/encode_761x1531/portable/clang_-O1_-fwrapv_-march_native seconds equiv 558814.512595
+build/encode_761x1531/portable/gcc_-O3_-march_native_-mtune_native equals-ref-gcc_-O3_-march_native_-mtune_native
+build/encode_761x1531/portable/gcc_-O3_-march_native_-mtune_native seconds equiv 811405.284292

@@ -1,0 +1,10 @@
+#include <inttypes.h>
+
+void int32_sort2(int32_t *x)
+{
+  int32_t x0 = x[0];
+  int32_t x1 = x[1];
+  int32_t c = (x1 < x0);
+  x[c] = x0;
+  x[1-c] = x1;
+}

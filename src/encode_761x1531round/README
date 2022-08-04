@@ -1,0 +1,10 @@
+2021.09.01/2021.09.03 tests with pip version of angr:
+
+   * ref gives warning-unrollerror with gcc -O3 since
+     Iop_QNarrowBin32Sto16Ux8 isn't supported in angr.
+
+But clang -O1 works and says avx=ref.
+
+2021.09.04 tests with angr-dev: Unrolling now works fine thanks to
+https://github.com/angr/angr/pull/2887. avx=ref with clang -O1,
+avx=ref with gcc -O3, ref=ref across compilers.

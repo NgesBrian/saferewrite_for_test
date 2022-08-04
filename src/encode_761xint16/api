@@ -1,0 +1,3 @@
+out int8 s 1522
+in int16 v 761
+call crypto_encode

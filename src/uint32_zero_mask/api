@@ -1,0 +1,3 @@
+return uint32 mask
+in uint32 x
+call uint32_zero_mask

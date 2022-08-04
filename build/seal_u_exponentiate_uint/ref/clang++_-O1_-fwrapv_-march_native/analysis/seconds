@@ -1,0 +1,4 @@
+compile 0.761242
+link 0.076972
+execute 0.012305
+valgrind 0.914346

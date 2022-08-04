@@ -1,0 +1,4 @@
+return uint32 z
+in uint32 x
+in uint32 y
+call uint32_min

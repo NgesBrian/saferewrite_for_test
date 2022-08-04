@@ -1,0 +1,3 @@
+out int32 y 10
+in int32 x 11
+call copy10

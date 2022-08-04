@@ -1,0 +1,3 @@
+out int8 s 191
+in int8 v 761
+call crypto_encode

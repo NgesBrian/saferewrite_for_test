@@ -1,0 +1,4 @@
+return int32 z
+in int32 x
+in int32 y
+call int32_max

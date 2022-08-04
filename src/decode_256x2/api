@@ -1,0 +1,3 @@
+out int8 v 256
+in int8 s 32
+call crypto_decode

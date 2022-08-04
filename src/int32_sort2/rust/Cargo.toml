@@ -1,0 +1,4 @@
+[package]
+name = "int32_sort2"
+version = "0.1.0"
+edition = "2018"
