@@ -85,3 +85,27 @@ To see examples showing implementations are different:
 To see what the analysis thinks each implementation is doing:
 
    less build/*/*/*/analysis/unrolled
+   
+   
+ We have two sets of functions those 
+ Those in C and those in C++.
+
+Beginning of Work from saferewrite
+
+To run C++, you have to : 
+ 
+   	chmod +t src/*
+   	chmod -t src/seal_u_exponentiate_uint
+   	chmod -t src/seal_u_exponentiate_uint_safe
+   	chmod -t src/seal_p_get_coeff_power
+	chmod -t src/seal_ntt
+   
+To run the C program,
+change the analyze file from canalyze to analayze then run the following commands:
+
+	chmod +t src/*
+   	chmod -t src/seal_load64
+   	chmod -t src/seal_sha3_512
+   	chmod -t src/seal_Store64
+   	chmod -t src/seal_blake2b
+   
