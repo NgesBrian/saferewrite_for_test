@@ -1,4 +1,4 @@
-compile 1.126130
-link 0.104034
-execute 0.020086
-valgrind 0.873686
+compile 0.822651
+link 0.036383
+execute 0.009572
+valgrind 0.827333
