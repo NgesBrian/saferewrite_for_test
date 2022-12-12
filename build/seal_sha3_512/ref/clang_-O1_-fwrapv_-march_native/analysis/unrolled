@@ -1,0 +1,16 @@
+v1 = mem_c0000f80_138_8
+v2 = mem_c0000f81_139_8
+v3 = mem_c0000f82_140_8
+v4 = mem_c0000f83_141_8
+v5 = mem_c0000f84_142_8
+v6 = mem_c0000f85_143_8
+v7 = mem_c0000f86_144_8
+v8 = mem_c0000f87_145_8
+out_h_0 = v1
+out_h_1 = v2
+out_h_2 = v3
+out_h_3 = v4
+out_h_4 = v5
+out_h_5 = v6
+out_h_6 = v7
+out_h_7 = v8
