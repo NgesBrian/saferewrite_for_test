@@ -1,9 +1,8 @@
 #include <stdio.h>
+#include <stdint.h>
 #include <vector>
-#include "seal/modulus.h"
+//#include "seal/modulus.h"
 using namespace std;
-
-typedef unsigned long uint64_t;
 
 int get_primes(uint64_t factor, unsigned int bitsize,size_t count)
 {
@@ -19,11 +18,9 @@ int get_primes(uint64_t factor, unsigned int bitsize,size_t count)
 #endif
     // Start with (2^bit_size - 1) / factor * factor + 1
 	uint64_t value = ((uint64_t(0x1) << bitsize) - 1) / factor * factor + 1;
-	uint64_t lower_bound = uint64_t(0x1) << (bitsize - 1);
-	vector<Modulus> destination;
+	//uint64_t lower_bound = uint64_t(0x1) << (bitsize - 1);
+	/*vector<Modulus> destination;
     // Start with (2^bit_size - 1) / factor * factor + 1
-    uint64_t value = ((uint64_t(0x1) << bit_size) - 1) / factor * factor + 1;
-    uint64_t lower_bound = uint64_t(0x1) << (bit_size - 1);
     while (count > 0 && value > lower_bound)
     {
      	Modulus new_mod(value);
@@ -33,8 +30,8 @@ int get_primes(uint64_t factor, unsigned int bitsize,size_t count)
              count--;
         }
          value -= factor;
-    }
-	return 0;
+    }*/
+	return value;
 }
 
 int verify(unsigned long factor, unsigned int bitsize){
