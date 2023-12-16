@@ -1,0 +1,6 @@
+return int32 a
+out uint64 s 1
+inout int32 r 32
+inout uint8 m 256
+inout uint8 p 8
+call keccak

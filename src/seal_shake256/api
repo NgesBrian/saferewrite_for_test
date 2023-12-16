@@ -1,0 +1,3 @@
+out uint8 out 16
+out uint8 outlen 8
+call shake256
