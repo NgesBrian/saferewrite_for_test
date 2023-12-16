@@ -11,6 +11,13 @@ change the analyze file from canalyze to analayze then run the following command
   	chmod -t src/seal_sha3_512
   	chmod -t src/seal_Store64
   	chmod -t src/seal_blake2b
+  	chmod -t src/seal_keccak
+  	chmod -t src/seal_keccakf1600
+  	chmod -t src/seal_sha3_256
+  	chmod -t src/seal_shake256
+  	chmod -t src/openFHE_store48
+  	chmod -t src/openFHE_store32
+  	chmod -t src/openFHE_blake2b_state
 	./analyze
 
 
