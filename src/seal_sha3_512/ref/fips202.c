@@ -604,8 +604,8 @@ void sha3_512(uint8_t *h, const uint8_t *in, size_t inlen)
   uint64_t s[25];
   uint8_t t[SHA3_512_RATE];
 
-  keccak_absorb(s, SHA3_512_RATE, in, inlen, 0x06);
-  keccak_squeezeblocks(t, 1, s, SHA3_512_RATE);
+  //keccak_absorb(s, SHA3_512_RATE, in, inlen, 0x06);
+  //keccak_squeezeblocks(t, 1, s, SHA3_512_RATE);
 
   for(i=0;i<64;i++)
     h[i] = t[i];

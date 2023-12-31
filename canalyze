@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 
 compilerlist = (
-  'clang++ -O1 -fwrapv -march=native',
-  'g++ -O3 -march=native -mtune=native',
- )
+  'clang -O1 -fwrapv -march=native',
+  'gcc -O3 -march=native -mtune=native',
+)
 
 typebits = {
   'int8': 8,
@@ -225,11 +225,11 @@ reservedfilenames = (
   'library.so.1',
   'analysis',
   'analysis-execute',
-  'analysis-execute.cpp',
+  'analysis-execute.c',
   'analysis-valgrind',
-  'analysis-valgrind.cpp',
+  'analysis-valgrind.c',
   'analysis-angr',
-  'analysis-angr.cpp',
+  'analysis-angr.c',
 )
 
 opimplementations = {}
@@ -273,7 +273,7 @@ def compile(o,p,i,compiler):
   rust = 'Cargo.toml' in files
   rustlocked = 'Cargo.lock' in files
 
-  cfiles = [x for x in files if x.endswith('.c') or x.endswith('.cpp')]
+  cfiles = [x for x in files if x.endswith('.c')]
   sfiles = [x for x in files if x.endswith('.s') or x.endswith('.S')]
   files = cfiles + sfiles
 
@@ -289,7 +289,7 @@ def compile(o,p,i,compiler):
       f.write('#define crypto_uint%d uint%d_t' % (bits,bits))
 
   for analysis in 'execute','valgrind','angr':
-    with open('%s/analysis-%s.cpp' % (builddir,analysis),'w') as f:
+    with open('%s/analysis-%s.c' % (builddir,analysis),'w') as f:
       f.write('#include <stdio.h>\n')
       f.write('#include <stdlib.h>\n')
       f.write('#include <string.h>\n')
@@ -297,7 +297,7 @@ def compile(o,p,i,compiler):
       f.write('\n')
   
       # function declaration
-      f.write('extern const ')
+      f.write('extern ')
       if funrettype != None:
         f.write('%s ' % funrettype)
       f.write('%s(%s);\n' % (funname,','.join(funargtypes)))
@@ -312,10 +312,10 @@ def compile(o,p,i,compiler):
       f.write('int main(int argc,char **argv)\n')
       f.write('{\n')
       for csymbol,symboltype,entries in inputs:
-         f.write('  uint%d_t *alloc_%s = (uint%d_t *) malloc(%d);\n' % (typebits[symboltype],csymbol,typebits[symboltype],entries*typebits[symboltype]/8))
+        f.write('  uint%d_t *alloc_%s = malloc(%d);\n' % (typebits[symboltype],csymbol,entries*typebits[symboltype]/8))
       for csymbol,symboltype,entries in outputs:
         if (csymbol,symboltype,entries) not in inputs:
-          f.write('  uint%d_t *alloc_%s = (uint%d_t *) malloc(%d);\n' % (typebits[symboltype],csymbol,typebits[symboltype],entries*typebits[symboltype]/8))
+          f.write('  uint%d_t *alloc_%s = malloc(%d);\n' % (typebits[symboltype],csymbol,entries*typebits[symboltype]/8))
       f.write('\n')
   
       # XXX: resource limits
@@ -483,7 +483,7 @@ fn main() {
 
   objfiles = []
 
-  for f in files+['analysis-execute.cpp','analysis-valgrind.cpp','analysis-angr.cpp']:
+  for f in files+['analysis-execute.c','analysis-valgrind.c','analysis-angr.c']:
     command = '%s -Wall -fPIC -DCRYPTO_NAMESPACE(x)=x -c %s' % (compiler,f)
 
     try:

@@ -1,0 +1,2 @@
+in int64 n
+call pow2_double

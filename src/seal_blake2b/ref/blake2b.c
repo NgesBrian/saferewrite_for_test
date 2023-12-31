@@ -287,15 +287,17 @@ int blake2b( void *out, size_t outlen, const void *in, size_t inlen, const void 
 
   if( keylen > 0 )
   {
-    if( blake2b_init_key( S, outlen, key, keylen ) < 0 ) return -1;
+    //if( blake2b_init_key( S, outlen, key, keylen ) < 0 ) return -1;
+    return -1;
   }
   else
   {
-    if( blake2b_init( S, outlen ) < 0 ) return -1;
+    //if( blake2b_init( S, outlen ) < 0 ) return -1;
+    return -1;
   }
 
-  blake2b_update( S, ( const uint8_t * )in, inlen );
-  blake2b_final( S, out, outlen );
+  //blake2b_update( S, ( const uint8_t * )in, inlen );
+  //blake2b_final( S, out, outlen );
   return 0;
 }
 

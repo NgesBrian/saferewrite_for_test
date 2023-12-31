@@ -1,0 +1,4 @@
+in int8 in 16
+out int8 out 16
+out int8 roundkey 240
+call Cipher

@@ -1,0 +1,8 @@
+Libraries to examine
+
+SEAL - C/C++
+openFHE - C/C++
+HElib - C++
+cuFHE - CUDA-accelerated TFHE NTT - C++
+HEAAN - C++ / No Longer maintained
+tfhe - C++ / No Longer maintained

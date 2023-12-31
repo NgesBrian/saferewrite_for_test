@@ -1,0 +1,9 @@
+in int64 k
+in int64 nbits
+in int64 c,
+in int64 p,
+in int64 d,
+in int64 s,
+in int64 chosenm,
+in int2 verbose
+return findM

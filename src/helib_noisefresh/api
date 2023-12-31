@@ -1,0 +1,3 @@
+in int64 m
+in int64 phim
+call boundFreshNoise
