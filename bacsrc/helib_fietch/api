@@ -1,0 +1,2 @@
+in int8 k 120
+call fetch_saved_values

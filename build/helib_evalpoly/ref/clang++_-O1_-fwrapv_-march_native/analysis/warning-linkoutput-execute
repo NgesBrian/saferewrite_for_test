@@ -1,0 +1,3 @@
+/usr/bin/ld: evalpoly.o: in function `evalPoly(unsigned long, unsigned long)':
+evalpoly.cpp:(.text+0x53): undefined reference to `cexp'
+collect2: error: ld returned 1 exit status

@@ -38,5 +38,16 @@ To work with C++ functions, rename the c++ppanalyze to analyze then run the foll
 	chmod -t src/openFHE_nbtheory2_ModInverse
     chmod -t src/openFHE_ubintdyn_nlz32
 	chmod -t src/openFHE_ubintdyn_nlz64
+	
+	chmod -t src/helib_cipher
+  	chmod -t src/helib_computeFudge
+  	chmod -t src/helib_evalpoly
+	chmod -t src/helib_getSBoxValue
+    chmod -t src/helib_longtobitvector
+	chmod -t src/helib_noisefresh
+    chmod -t src/helib_powerdouble
+	chmod -t src/helib_revinc
+	chmod -t src/helib_rotations
+	
 	./analyze
   
