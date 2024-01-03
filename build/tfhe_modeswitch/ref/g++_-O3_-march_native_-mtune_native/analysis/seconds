@@ -1,3 +1,3 @@
-compile 1.061166
-link 0.047773
-valgrind 0.002237
+compile 1.080650
+link 0.104141
+valgrind 0.001060

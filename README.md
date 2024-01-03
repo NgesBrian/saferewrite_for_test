@@ -57,6 +57,7 @@ To work with C++ functions, rename the c++ppanalyze to analyze then run the foll
 	chmod -t src/helib_rotations
 	
 	chmod -t src/tfhe_modeswitch
+	chmod -t src/tfhe_modswitchfromtorus32
 	
 	./analyze
   
