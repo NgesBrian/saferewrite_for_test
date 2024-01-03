@@ -1,0 +1,2 @@
+in int32 n
+call random_reals

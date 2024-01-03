@@ -18,6 +18,13 @@ change the analyze file from canalyze to analayze then run the following command
   	chmod -t src/openFHE_store48
   	chmod -t src/openFHE_store32
   	chmod -t src/openFHE_blake2b_state
+  	
+  	chmod -t src/tfhe_accurate_sine
+  	chmod -t src/tfhe_fft
+  	chmod -t src/tfhe_floor
+  	chmod -t src/tfhe_reals
+  	chmod -t src/tfhe_reversebits
+  	
 	./analyze
 
 
@@ -48,6 +55,8 @@ To work with C++ functions, rename the c++ppanalyze to analyze then run the foll
     chmod -t src/helib_powerdouble
 	chmod -t src/helib_revinc
 	chmod -t src/helib_rotations
+	
+	chmod -t src/tfhe_modeswitch
 	
 	./analyze
   

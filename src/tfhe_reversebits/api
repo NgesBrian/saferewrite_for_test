@@ -1,0 +1,4 @@
+in int64 x
+in int32 n
+call reverse_bits
+return int64 z
