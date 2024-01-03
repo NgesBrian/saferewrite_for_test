@@ -1,0 +1,5 @@
+# mismatch between CPU execution of binary and saferewrite execution of unrolled:
+in_index_0 = 0
+in_slots_0 = 0
+executed_out_d_0 = 4210768
+unrolled_out_d_0 = 4210736
